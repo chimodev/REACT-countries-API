@@ -1,14 +1,13 @@
-
-import Main from './main.js'
 import "./app.css"
 import Nav from './nav.js'
+import Filter from './filter.js';
 
 function App() {
 
   return (
     <>
       <Nav/>
-      <Main/>
+      <Filter/>
     </>
   );
 }

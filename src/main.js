@@ -1,14 +1,21 @@
 import axios from "axios";
 import { useEffect ,useState} from "react";
 
-function Main() {
+function Main(props) {
   const [countries,setCountries] = useState([])
 
+  
   useEffect(()=>{
+    axios.get(`https://restcountries.com/v3.1/name/${props.search}`).then((response) => {
+      setCountries(response.data);
+   });
+   return()=>{
     axios.get('https://restcountries.com/v3.1/all').then((response) => {
       setCountries(response.data);
    });
-  },[])
+   }
+  },[props.search])
+
 
   console.log(countries)
 
