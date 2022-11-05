@@ -3,20 +3,22 @@ import Main from './main'
 
 function Filter() {
   const [search,setSearch] = useState("")
+  const [region,setRegion] = useState(null)
 
   return (
     <>
     <div className='filters-con'>
         <input onChange={e=>setSearch(e.target.value)} type="text" placeholder="Search country by name..."/>
-        <select>
-            <option>Asia</option>
-            <option>Americas</option>
-            <option>Oceania</option>
-            <option>Europe</option>
-            <option>Africa</option>
+        <select onChange={e=>setRegion(e.target.value)} value={region} name='region' id='region'>
+            <option value="none" selected disabled hidden>Filter by region:</option>
+            <option value="Asia">Asia</option>
+            <option value="Americas">Americas</option>
+            <option value="Oceania">Oceania</option>
+            <option value="Europe">Europe</option>
+            <option value="Africa">Africa</option>
         </select>
     </div>
-    <Main search ={search}/>
+    <Main search={search} region={region}/>
     </>
   )
 }

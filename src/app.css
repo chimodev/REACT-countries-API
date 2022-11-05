@@ -65,12 +65,45 @@ body{
     width: 25%;
 }
 
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
 .container{
     width: 90%;
     margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(4,22%);
+    grid-row-gap: 40px;
+    grid-column-gap: 4%;
+}
+
+.con-sin{
+    width: 90%;
+    margin: 10px auto;
+}
+
+.country-sin{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.country-sin img{
+    width: 400px;
+}
+
+.country-info{
+    display: flex;
+}
+
+.back{
+    background-color: var(--element-color);
+    color: var(--text-color);
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 h3{
@@ -79,10 +112,8 @@ h3{
 
 .country{
     background-color: var(--element-color);
-    margin-bottom: 40px;
     border-radius: 5px;
     overflow: hidden;
-    width: 22%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
