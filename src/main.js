@@ -33,7 +33,7 @@ function Main(props) {
     <div className="container">
     {countries.map((country,i)=>{
       return(
-        <Link to={`/country/${country.name}`}>
+        <Link to={`/country/${country.alpha3Code}`}>
         <div className="country" key={i}>
             <img src={country.flags.png} alt="no image"/>
             <div className="details">

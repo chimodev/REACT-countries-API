@@ -16,7 +16,7 @@ function Nav() {
   return (
     <div className='nav'>
         <span>Where in the world?</span>
-        <button onClick={toggleTheme}>Mode</button>
+        <button onClick={toggleTheme}>Dark mode</button>
     </div>
   )
 }
