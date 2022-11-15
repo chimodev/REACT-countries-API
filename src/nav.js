@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 
 function Nav() {
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState("light");
     const toggleTheme = () => {
       if (theme === 'light') {
         setTheme('dark');
@@ -11,12 +11,13 @@ function Nav() {
     };
     useEffect(() => {
       document.body.className = theme;
+
     }, [theme]);
 
   return (
     <div className='nav'>
         <span>Where in the world?</span>
-        <button onClick={toggleTheme}>Dark mode</button>
+        <button onClick={toggleTheme}><ion-icon name="moon-outline"></ion-icon>Dark mode</button>
     </div>
   )
 }

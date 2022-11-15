@@ -8,7 +8,10 @@ function Filter() {
   return (
     <>
     <div className='filters-con'>
+        <div className='filter'>
+        <ion-icon name="search-outline"></ion-icon>
         <input onChange={e=>setSearch(e.target.value)} type="text" placeholder="Search country by name..."/>
+        </div>
         <select onChange={e=>setRegion(e.target.value)} value={region} name='region' id='region'>
             <option value="none" selected disabled hidden>Filter by region:</option>
             <option value="Asia">Asia</option>

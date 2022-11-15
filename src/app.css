@@ -40,6 +40,13 @@ body{
     cursor: pointer;
     color: var(--text-color);
     font-weight: 600;
+    position: relative;
+}
+
+.nav button ion-icon{
+    position: absolute;
+    top: .1rem;
+    left: -.5rem;
 }
 
 .filters-con{
@@ -51,6 +58,7 @@ body{
     margin-bottom: 40px;
 }
 
+
 .filters-con select{
     width: 15%;
     outline: none;
@@ -61,16 +69,33 @@ body{
     border: none;
 }
 
-.filters-con input{
+.filters-con option:hover{
+    background-color: var(--background-color);
+}
+
+.filter input{
     outline: none;
     height: 1.5rem;
     background-color: var(--element-color);
     color: var(--text-color);
     border: none;
     padding: .5rem;
+    padding-left: 2rem;
     border-radius: 5px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
+}
+
+.filter{
     width: 25%;
+    position: relative;
+}
+
+.filter ion-icon{
+    position: absolute;
+    font-size: 1rem;
+    top: .75rem;
+    left: .5rem;
 }
 
 a{
@@ -101,10 +126,14 @@ a{
 
 .country-sin img{
     width: 400px;
+    max-height: 300px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .country-info{
     display: flex;
+    gap:5rem;
+    margin-bottom: 3rem;
 }
 
 .border-cou{
@@ -137,7 +166,13 @@ a{
     width: 20%;
     padding: 10px;
     border-radius: 5px;
+    box-sizing: border-box;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.back ion-icon{
+    margin-right: 5px;
+    padding-top: 5px;
 }
 
 h3{
@@ -148,7 +183,12 @@ h3{
     background-color: var(--element-color);
     border-radius: 5px;
     overflow: hidden;
+    transition: .2s linear;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.country:hover{
+    transform: scale(1.1);
 }
 
 .details{
@@ -170,5 +210,18 @@ h3{
 @media (max-width:350px) {
     .container{
         grid-template-columns: 100%;
+    }
+    .country-info{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .filter{
+        width: 55%;
+    }
+    .filters-con select{
+        width: 25%;
+    }
+    .back{
+        width: 50%;
     }
 }

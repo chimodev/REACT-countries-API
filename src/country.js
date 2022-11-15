@@ -26,6 +26,7 @@ function Country() {
     <div className='con-sin'>
       <Link to="/">
         <div className='back'>
+        <ion-icon name="arrow-back-outline"></ion-icon>
           Back
         </div>
       </Link>    
