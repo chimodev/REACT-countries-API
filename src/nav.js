@@ -15,10 +15,13 @@ function Nav() {
     }, [theme]);
 
   return (
-    <div className='nav'>
+    <header className='nav-header'>
+      <div className='nav'>
         <span>Where in the world?</span>
         <button onClick={toggleTheme}><ion-icon name="moon-outline"></ion-icon>Dark mode</button>
     </div>
+    </header>
+
   )
 }
 

@@ -52,7 +52,7 @@ function Country() {
                 </div>
             </div>
             <div className='border-cou'>
-              <p>Border countries: </p>
+              <h3>Border countries: </h3>
               <div className='borders'>
               {country.borders?.map((bor)=>{
                 return(
